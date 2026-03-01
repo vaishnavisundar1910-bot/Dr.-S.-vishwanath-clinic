@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Admin Panel</h1>
+
+<div id="appointmentsList"></div>
+
+<script>
+let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+
+let container = document.getElementById("appointmentsList");
+
+appointments.forEach((app, index) => {
+    container.innerHTML += `
+        <div>
+            <p>${app.name} - ${app.date} - ${app.time} - ${app.status}</p>
+            <button onclick="approve(${index})">Approve</button>
+        </div>
+    `;
+});
+
+function approve(index) {
+    appointments[index].status = "Approved";
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+    location.reload();
+}
+</script>
+
+</body>
+</html>
