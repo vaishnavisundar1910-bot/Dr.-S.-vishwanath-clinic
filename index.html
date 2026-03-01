@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dr. S. Vishwanath Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Dr. S. Vishwanath Clinic</h1>
+    <p>Your Health, Our Priority</p>
+</header>
+
+<section class="doctor-profile">
+    <h2>Doctor Profile</h2>
+    <p><strong>Dr. S. Vishwanath</strong></p>
+    <p>MBBS, MD</p>
+    <p>15+ Years Experience</p>
+</section>
+
+<section class="appointment">
+    <h2>Book Appointment</h2>
+
+    <form id="appointmentForm">
+        <input type="text" id="name" placeholder="Patient Name" required>
+        <input type="date" id="date" required>
+
+        <select id="time">
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>4:00 PM</option>
+            <option>5:00 PM</option>
+        </select>
+
+        <button type="submit">Apply Appointment</button>
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
